@@ -1,1 +1,24 @@
-my-test-property: "Hello from GitHub Prod"
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres-svc:5432/chat_service_db
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+  liquibase:
+    url: jdbc:postgresql://postgres-svc:5432/chat_service_db
+    user: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    show-sql: false
+
+  kafka:
+    bootstrap-servers: kafka-svc:9092
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+
+jwt:
+  secret: ${JWT_SECRET}
