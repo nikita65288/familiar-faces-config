@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      # Use default 27017 port inside k3s 
+      uri: mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST:mongo}:27017/${MONGO_DB:media_db}?authSource=admin
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
