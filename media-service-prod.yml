@@ -8,3 +8,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://discovery-service:8761/eureka/
+  instance:
+    hostname: media-service
+    preferIpAddress: false      
