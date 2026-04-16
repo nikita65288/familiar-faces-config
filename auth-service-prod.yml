@@ -16,7 +16,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://discovery-service:8761/eureka/
-
+  instance:
+    hostname: auth-service
+    preferIpAddress: false
+    
 jwt:
   secret: ${JWT_SECRET}   
   expiration: ${JWT_EXPIRATION}
