@@ -24,3 +24,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://discovery-service:8761/eureka/
+  instance:
+    hostname: user-service
+    preferIpAddress: false      
