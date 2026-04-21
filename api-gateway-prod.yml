@@ -5,6 +5,11 @@ eureka:
   instance:
     hostname: api-gateway
     preferIpAddress: false      
-
+    
+server:
+  tomcat:
+    accesslog:
+      enabled: true
+      
 jwt:
   secret: ${JWT_SECRET}
